@@ -24,23 +24,9 @@ function display_all_submits()
     foreach ($lines as $line) {
         echo "<h3>New User Data</h3>";
         $words = explode(",", $line);
-        $i = 1;
-        foreach ($words as $word) {
-            switch ($i) {
-                case 1:
-                    echo "<h5>Date: $word</h5>";
-                    break;
-                case 2:
-                    echo "<h5>IP: $word</h5>";
-                    break;
-                case 3:
-                    echo "<h5>Name: $word</h5>";
-                    break;
-                default:
-                    echo "<h5>Email: $word</h5>";
-                    break;
-            }
-            $i++;
-        }
+        echo "<h5>Date: $words[0]</h5>";
+        echo "<h5>IP: $words[1]</h5>";
+        echo "<h5>Name: $words[2]</h5>";
+        echo "<h5>Email: $words[3]</h5>";
     }
 }
